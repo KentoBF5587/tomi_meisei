@@ -24,5 +24,4 @@ test:
 production:
   <<: *default
   database: tomi_meisei_production
-  username: tomi_meisei_production_user
-  password: <%= ENV["TOMI_MEISEI_DATABASE_PASSWORD"] %>
+  
