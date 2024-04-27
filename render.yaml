@@ -1,0 +1,21 @@
+databases:
+  - name: tomi_meisei_production
+    databaseName: tomi_meisei_production
+    user: tomi_meisei
+    region: singapore
+
+services:
+  - type: web
+    name: tomi_meisei
+    env: ruby
+    region: singapore
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: tomi_meisei_production
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
