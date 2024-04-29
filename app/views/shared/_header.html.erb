@@ -31,10 +31,7 @@
         <li class='nav-item dropdown dropdown-slide'>
           <!-- link_toを使う形に修正してくださいdata属性、area属性の書き方は次の通りです。-->
           <!-- data: { bs_toggle: 'dropdown' }, aria: { haspopup: 'true', expanded: 'false' } -->
-          <a href='#' class='nav-link' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false' id='header-profile'>
-            <!-- image_tagを使う形に修正してください -->
-            <img class='rounded-circle mr15' src='sample.jpg' width='40' height='40' />
-          </a>
+          
           <div class='dropdown-menu dropdown-menu-end'>
             <div class='dropdown-item'><%= current_user.name %></div>
             <div class='dropdown-divider'></div>
