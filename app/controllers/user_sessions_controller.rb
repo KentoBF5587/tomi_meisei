@@ -1,4 +1,5 @@
 class UserSessionsController < ApplicationController
+  skip_before_action :require_login, only: %i[new create]
 
   def create
     @user = login(params[:email], params[:password])
@@ -6,7 +7,7 @@ class UserSessionsController < ApplicationController
       redirect_back_or_to root_path
     else
       flash.now[:danger] = "ログイン情報が間違っているようだ"
-      render :new_record
+      render :new
     end
   end
 
