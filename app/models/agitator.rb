@@ -4,7 +4,7 @@ class Agitator < ApplicationRecord
   validates :common_name, presence: true, length: { maximum: 7 }
   validates :name, presence: true, length: { maximum: 20 }
   validates :when_he_said, presence: true, length: { maximum: 10 }
-  validates :what_people_do, presence: true, length: { maximum: 10 }
+  validates :what_people_do, presence: true, length: { maximum: 15 }
   validates :treasure, presence: true, length: { maximum: 7 }
   validates :place, presence: true, length: { maximum: 10 }
   validates :where_they_go, presence: true, length: { maximum: 17 }

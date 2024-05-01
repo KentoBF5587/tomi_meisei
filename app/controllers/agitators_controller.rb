@@ -1,8 +1,16 @@
 class AgitatorsController < ApplicationController
-
+  skip_before_action :require_login, only: %i[index show]
 
   def new
     @agitator = current_user.agitators.build
+  end
+
+  def index
+    @agitators = Agitator.includes(:user).order(created_at: :desc)
+  end
+
+  def show
+    @agitator = Agitator.find(params[:id])
   end
 
   def create

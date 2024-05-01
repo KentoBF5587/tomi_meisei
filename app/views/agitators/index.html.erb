@@ -1,0 +1,12 @@
+<h2>刻まれた言葉</h2>
+
+<div>
+<% if @agitators.present? %>
+  <%= render @agitators %>
+<% else %>
+  <div>言葉は刻まれていません</div>
+<% end %>
+</div>
+<br />
+<div>
+  <%= link_to "タイトルに戻る", root_path %>

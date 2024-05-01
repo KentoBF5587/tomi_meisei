@@ -1,0 +1,37 @@
+<h2>詳細</h2>
+
+<div>
+  No.<%= @agitator.id %>
+</div>
+<div>
+  記録者：<%= @agitator.user.name %>
+</div>
+<div>
+  <ul>
+  <li>
+  <%= @agitator.three_things %>、この世の全てを手に入れた
+  <%= @agitator.gender %>
+  </li>
+  <li>
+  ”<%= @agitator.common_name %>”
+  <%= @agitator.name %>
+  </li>
+  <li>
+  <%= @agitator.when_he_said %>
+  一言は、
+  <%= @agitator.what_people_do %>
+  </li>
+  </ul>
+  <ul>
+  <li>
+  <%= @agitator.treasure %>か？欲しけりゃくれてやる、探せ！
+  <%= @agitator.place %>に置いてきた
+  </li>
+  </ul>
+  <ul>
+  <%= @agitator.where_they_go %>夢を追い続ける。世はまさに
+  <%= @agitator.epic_name %>時代！
+</div>
+
+<%= link_to "Xで共有する", "https://twitter.com/share?url=#{request.url}", target: 'blank' %>
+<%= link_to "刻まれた言葉一覧へ", agitators_path %> 
