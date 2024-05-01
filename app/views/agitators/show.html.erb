@@ -33,5 +33,5 @@
   <%= @agitator.epic_name %>時代！
 </div>
 
-<%= link_to "Xで共有する", "https://twitter.com/share?url=#{request.url}", target: 'blank' %>
+<%= link_to "Xで共有する", "https://twitter.com/share?url=#{request.url}&text=#{URI.encode_www_form_component("”#{@agitator.common_name}”#{@agitator.name}の言葉に奮い立ちました")}&hashtags=#{URI.encode_www_form_component("ミニアプリ, トミメイセイ")}", target: '_blank' %>
 <%= link_to "刻まれた言葉一覧へ", agitators_path %> 

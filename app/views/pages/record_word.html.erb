@@ -2,7 +2,10 @@
 
 新たな言葉が刻まれました。
 <p>遊んでくれて……ありがとう!!!</p>
-
+<div>
+<%= link_to "Xで共有する", "https://twitter.com/share?url=#{URI.encode_www_form_component(root_url)}&text=#{URI.encode_www_form_component("新たな言葉が刻まれた。あなたも続こう。")}&hashtags=#{URI.encode_www_form_component("ミニアプリweek,トミメイセイ")}", target: '_blank' %>
+</div>
+<br />
 <div>
   <%= link_to "もう一度遊ぶ", new_agitator_path %>
 </div>
