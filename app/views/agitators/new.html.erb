@@ -1,14 +1,37 @@
-フォームを書く
+<div>
+<h2>言葉を刻もう</h2>
+</div>
 
-例文
-富、名声、力、（5文字ずつ）この世の全てを手に入れた男
-海賊王ゴールドロジャー（名前のところは20字で制限かけている）
-
-彼の死に際に放った一言は人々を海へ駆り立てた
-「俺の財宝か？欲しけりゃくれてやる、探せ！この世の全てをそこに置いてきた」
-
-男たちはグランドラインを目指し、夢へと追いかける。
-世はまさに、大海賊時代！
-
-言葉を刻む 戻る
+<%= form_with model: @agitator do |f| %>
+<div>
+  <%= f.text_field :three_things, class: "form-control", placeholder: "富・名声・力", size: 35 %>（最大17文字）
+  、この世の全てを手に入れた
+  <%= f.text_field :gender, class: "form-control", placeholder: "男", size: 10 %>（最大7文字）
+</div>
+<div>
+  ”<%= f.text_field :common_name, class: "form-control", placeholder: "海賊王", size: 10 %>”（最大7文字）
+  <%= f.text_field :name, class: "form-control", placeholder: "ゴールド・ロジャー", size: 42 %>（最大20文字）
+</div>
+<div>
+  <%= f.text_field :when_he_said, class: "form-control", placeholder: "彼の死に際に放った" %>（最大10文字）
+  一言は、
+  <%= f.text_field :what_people_do, class: "form-control", placeholder: "人々を海へ駆り立てた" %>（最大10文字）
+</div>
+<br />
+<div>
+  <%= f.text_field :treasure, class: "form-control", placeholder: "俺の財宝", size: 10 %>（最大7文字）
+  か？欲しけりゃくれてやる、探せ！
+  <%= f.text_field :place, class: "form-control", placeholder: "この世の全てをそこ" %>（最大10文字）
+  に置いてきた
+</div>
+<br />
+<div>
+  <%= f.text_field :where_they_go, class: "form-control", placeholder: "男たちはグランドラインを目指し", size: 35 %>（最大17文字）
+  夢を追い続ける。世はまさに
+  <%= f.text_field :epic_name, class: "form-control", placeholder: "大海賊" %>（最大10文字）
+  時代！
+</div>
+<br />
+  <%= f.submit "言葉を刻む", class: "btn btn-primary" %>
+<% end %>
 

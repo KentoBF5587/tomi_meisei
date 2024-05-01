@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :agitators, only: %i[new create]
 
   get "introduction", to: "pages#introduction"
+  get "record_word", to: "pages#record_word"
 
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'
