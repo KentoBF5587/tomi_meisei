@@ -16,3 +16,82 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+    box-sizing: border-box;
+ }
+
+ body {
+    margin-top: 80px;
+    padding: 0;
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #e6e6e6;
+ }
+ header {
+    width: 100%;
+    padding: 30px 4% 10px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height: 80px;
+ }
+ h1 {
+    margin: 0; padding: 0;
+    font-size: 20px;
+ }
+ a {
+    text-decoration: none;
+    color: #4b4b4b;
+ }
+ nav {
+    margin: 0 0 0 auto;
+ }
+ ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+ }
+ li {
+    margin: 0 0 0 15px;
+    font-size: 14px;
+ }
+ .btn a {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 300px;
+        height: 60px;
+        color: #333;
+        font-size: 18px;
+        font-weight: 700;
+        text-decoration: none;
+        background-color: #dcd3b2;
+        border-radius: 20px;
+ }
+ .btn-b a {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 150px;
+        height: 50px;
+        color: #333;
+        font-size: 15px;
+        font-weight: 700;
+        text-decoration: none;
+        background-color: #6495ed;
+        border-radius: 20px;
+ }
+ .btn {
+    display: flex;
+    justify-content: center;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.nowrap {
+    white-space: nowrap;
+}

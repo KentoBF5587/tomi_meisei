@@ -1,7 +1,13 @@
 <header>
-<div>
-  <%= link_to "刻まれた言葉", agitators_path %>
-  <%= link_to "ログアウト", logout_path,  data: { turbo_method: :delete } %>
-</div>
+<h1><%= link_to "富・名声・力", root_path %></h1>
+<nav class-"pc-nav">
+  <ul>
+    <li><%= link_to "刻まれた言葉", agitators_path %></li>
+    <li><%= link_to "言葉を刻む", new_agitator_path %></li>
+    <li><%= link_to "ログアウト", logout_path,  data: { turbo_method: :delete } %></li>
+  </ul>
+</nav>
+  
+
 
 </header>

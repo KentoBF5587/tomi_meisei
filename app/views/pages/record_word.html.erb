@@ -1,17 +1,22 @@
+<% content_for(:title, '言葉作成完了') %>
+<div class="form-group">
+<h3>新たな言葉が刻まれました。</h3>
 
+遊んでくれて……ありがとう!!!
+</div>
 
-新たな言葉が刻まれました。
-<p>遊んでくれて……ありがとう!!!</p>
-<div>
-<%= link_to "Xで共有する", "https://twitter.com/share?url=#{URI.encode_www_form_component(root_url)}&text=#{URI.encode_www_form_component("新たな言葉が刻まれた。あなたも続こう。")}&hashtags=#{URI.encode_www_form_component("ミニアプリweek,トミメイセイ")}", target: '_blank' %>
+<div class="btn">
+<%= link_to "Xで共有する", "https://twitter.com/share?url=#{URI.encode_www_form_component(root_url)}&text=#{URI.encode_www_form_component("#{current_user.name}が新たな言葉を刻みました。あなたも続こう。")}&hashtags=#{URI.encode_www_form_component("ミニアプリweek,トミメイセイ")}", target: '_blank' %>
 </div>
 <br />
-<div>
+<div class="btn">
   <%= link_to "もう一度遊ぶ", new_agitator_path %>
 </div>
-<div>
+<br />
+<div class="btn">
   <%= link_to "他の刻まれた言葉を見る", agitators_path %>
 </div>
-<div>
+<br />
+<div class="btn">
   <%= link_to "タイトルへ戻る", root_path %>
 </div>

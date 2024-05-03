@@ -1,6 +1,8 @@
-<div id="agitator-id-<%= agitator.id %>">
+<div class="form-group">
   No.<%= agitator.id %>
   記述者：<%= agitator.user.name %>
   書き出し：<%= agitator.three_things %>〜
+  <div class="btn-b">
   <%= link_to "この記述を読む", agitator %>
+  </div>
 </div>

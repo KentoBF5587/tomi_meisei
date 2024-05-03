@@ -1,39 +1,41 @@
+<% content_for(:title, 'イントロダクション') %>
 <h2>このアプリは？</h2>
 
-「富、名声、力……」から始まる某人気漫画のパロディミニアプリです。
+<p>「富、名声、力……」から始まる某人気漫画のパロディミニアプリです。</p>
 
 
 <h2>どうやって遊ぶ？</h2>
 
-下のリンクを押すと、”あの某人気漫画のプロローグ”が表示されます。<br />
-全2種類
+<div class-="form-group">
+下のリンクを押すと、”あの某人気漫画のプロローグ”が表示されます。全3種類。
+</div>
 
 <div>現在実装中</div>
 
 <h2>アカウントを作ってさらなる高みへ</h2>
-このアプリはログインなしでも遊べますが、アカウントを作ると別モードでのプレイが可能に。<br />
-<div>
+上記のように、このアプリはログインなしでも遊べますが、アカウントを作ると別モードでのプレイが可能に。
+<div class="form-group">
 <h3>”あのプロローグを作る事が出来る”</h3>
-あなたは”全世界を震撼させた”現場に立ち会うことになります。<br />
+あなたは”全世界を震撼させた”現場に立ち会うことになります。
 あなたもぜひ”語り手”となってみましょう。
 </div>
 
-<%= link_to "Xで共有する", "https://twitter.com/share?url=#{URI.encode_www_form_component(root_url)}&text=#{URI.encode_www_form_component("新たな言葉が刻まれた。あなたも続こう。")}&hashtags=#{URI.encode_www_form_component("ミニアプリweek,トミメイセイ")}", target: '_blank' %>
-
-<div>
-<h3>”作ったプロローグが残る”</h3>
-<div>
-あなたが刻んだ言葉がデータに残ります。<br />
-シチュエーションは自由。（※文字数制限にご注意下さい）<br />
+<div class="form-group">
+<h3>”作成したプロローグが残る”</h3>
+作成したあなたのプロローグは、”刻まれた言葉”ページに残ります。
 </div>
-<div>
+
+<div class="form-group">
+まずは書いてみてください。
+</div>
+<div class="btn">
   <%= link_to "言葉を刻む（アカウント必要）", new_agitator_path %>
 </div>
 <br />
-<div>
-<%= link_to "どんな言葉が刻まれているか見てみる", agitators_path %>
+<div class="btn">
+<%= link_to "刻まれた言葉を見る", agitators_path %>
 </div>
 <br />
-<div>
+<div class="btn">
   <%= link_to "タイトルへ戻る", root_path %>
 </div>

@@ -1,41 +1,47 @@
-<div>
+<% content_for(:title, '作成ページ') %>
 <h2>言葉を刻もう</h2>
-</div>
 
-<%= form_with model: @agitator do |f| %>
-<div>
-  <%= f.text_field :three_things, class: "form-control", placeholder: "富・名声・力", size: 35 %>（最大17文字）
-  、この世の全てを手に入れた
-  <%= f.text_field :gender, class: "form-control", placeholder: "男", size: 15 %>（最大7文字）
-</div>
-<div>
+<div style="text-align: center;">
+  <%= form_with model: @agitator do |f| %>
+    <div class="form-group">
+    <%= f.text_field :three_things, class: "form-control", placeholder: "富・名声・力", size: 35 %>（最大17文字）
+     、この世の全てを手に入れた
+    <%= f.text_field :gender, class: "form-control", placeholder: "男", size: 15 %>（最大7文字）
+    </div>
+  <div class="form-group">
   ”<%= f.text_field :common_name, class: "form-control", placeholder: "海賊王", size: 15 %>”（最大7文字）
   <%= f.text_field :name, class: "form-control", placeholder: "ゴールド・ロジャー", size: 42 %>（最大20文字）
-</div>
-<div>
-  <%= f.text_field :when_he_said, class: "form-control", placeholder: "彼の死に際に放った" %>（最大10文字）
-  一言は、
-  <%= f.text_field :what_people_do, class: "form-control", placeholder: "人々を海へ駆り立てた", size: 38 %>（最大15文字）
-</div>
-<br />
-<div>
-  <%= f.text_field :treasure, class: "form-control", placeholder: "俺の財宝", size: 15 %>（最大7文字）
-  か？欲しけりゃくれてやる、探せ！
-  <%= f.text_field :place, class: "form-control", placeholder: "この世の全てをそこ" %>（最大10文字）
-  に置いてきた
-</div>
-<br />
-<div>
-  <%= f.text_field :where_they_go, class: "form-control", placeholder: "男たちはグランドラインを目指し", size: 35 %>（最大17文字）
-  夢を追い続ける。世はまさに
-  <%= f.text_field :epic_name, class: "form-control", placeholder: "大海賊" %>（最大10文字）
-  時代！
-</div>
-<br />
-  <%= f.submit "言葉を刻む", class: "btn btn-primary", data: { confirm: "言葉は取り消せませんが宜しいですか？" } %>
-<% end %>
-</div>
-<br />
-<div>
-  <%= link_to "アプリの説明ページに戻る", introduction_path %>
+ </div>
+ <div class="form-group">
+   <%= f.text_field :when_he_said, class: "form-control", placeholder: "彼の死に際に放った" %>（最大10文字）
+   一言は、
+   <%= f.text_field :what_people_do, class: "form-control", placeholder: "人々を海へ駆り立てた", size: 38 %>（最大15文字）
+  </div>
+
+
+  <div class="form-group">
+    「<%= f.text_field :treasure, class: "form-control", placeholder: "俺の財宝", size: 15 %>（最大7文字）
+    か？欲しけりゃくれてやる、探せ！
+    <%= f.text_field :place, class: "form-control", placeholder: "この世の全てをそこ" %>（最大10文字）
+    に置いてきた」
+  </div>
+
+
+  <div class="form-group">
+    <%= f.text_field :where_they_go, class: "form-control", placeholder: "男たちはグランドラインを目指し", size: 35 %>（最大17文字）
+    夢を追い続ける。世はまさに
+    <%= f.text_field :epic_name, class: "form-control", placeholder: "大海賊" %>（最大10文字）
+    時代！
+  </div>
+
+  <div class="form-group">
+  <div class="btn">
+  <%= f.submit "言葉を刻む", class: "btn btn-primary" %>
+  </div>
+  </div>
+  <% end %>
+
+  <div>
+    <%= link_to "アプリの説明ページに戻る", introduction_path %>
+  </div>
 </div>
