@@ -1,0 +1,2 @@
+class RandamRoger < ApplicationRecord
+end

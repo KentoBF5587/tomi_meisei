@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get "introduction", to: "pages#introduction"
   get "record_word", to: "pages#record_word"
+  get "random_result", to: "pages#random_result"
 
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'
