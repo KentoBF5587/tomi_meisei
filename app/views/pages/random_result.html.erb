@@ -9,5 +9,5 @@
     <%= link_to "Xで共有する", "https://twitter.com/share?url=#{request.url}&text=#{URI.encode_www_form_component("#{@randam_roger.shortbody}")}&hashtags=#{URI.encode_www_form_component("ミニアプリ, トミメイセイ")}", target: '_blank' %>
   </div>
 <% else %>
-  No Random quotes available.
+  ※もう少しお待ちください
 <% end %>
