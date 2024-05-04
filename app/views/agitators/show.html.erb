@@ -46,7 +46,7 @@
 
 <div class="form-group">
 <div class="btn-b">
-<%= link_to "Xで共有する", "https://twitter.com/share?url=#{request.url}&text=#{URI.encode_www_form_component("記述者#{@agitator.user.name}：「”#{@agitator.common_name}”#{@agitator.name}の言葉」に奮い立ちました")}&hashtags=#{URI.encode_www_form_component("ミニアプリ, トミメイセイ")}", target: '_blank' %>
+<%= link_to "Xで共有する", "https://twitter.com/share?url=#{request.url}&text=#{URI.encode_www_form_component("記述者#{@agitator.user.name}：「”#{@agitator.common_name}”#{@agitator.name}の言葉」に奮い立ちました")}&hashtags=#{URI.encode_www_form_component("ミニアプリ,トミメイセイ")}", target: '_blank' %>
 </div>
 </div>
 <div class="btn-b">
