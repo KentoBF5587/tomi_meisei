@@ -16,8 +16,9 @@ class AgitatorsController < ApplicationController
   def create
     @agitator = current_user.agitators.build(agitator_params)
     if @agitator.save
-      redirect_to record_word_path
+      redirect_to record_word_path, success: t('agitators.create.success')
     else
+      flash.now[:danger] = t('agitators.create.failure')
       render :new, status: :unprocessable_entity
     end
   end
