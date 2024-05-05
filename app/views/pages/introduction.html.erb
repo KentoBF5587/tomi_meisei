@@ -11,7 +11,7 @@
 </div>
 
 <div class="btn-b">
-  <a href="#" id="button">プロローグへ</a>
+  <%= link_to "プロローグ", random_result_path %>
 </div>
 
 <h2>アカウントを作ってさらなる高みへ</h2>
@@ -42,14 +42,3 @@
   <%= link_to "タイトルへ戻る", root_path %>
 </div>
 
-<script>
-document.getElementById("button").addEventListener('click', function() {
-    const subjectArray = [
-        'https://tomi-meisei.onrender.com/result1', 'https://tomi-meisei.onrender.com/result2', 'https://tomi-meisei.onrender.com/result3'
-    ];
-
-    const subject = subjectArray[Math.floor(Math.random() * subjectArray.length)];
-
-    window.location.href = subject;
-});
-</script>
