@@ -1,0 +1,17 @@
+<% content_for(:title, 'ロジャーの言葉2') %>
+<h2>結果</h2>
+
+<strong>
+<div class="form-group">
+世界は…そうだ。自由を求め選ぶべき世界が目の前に広々と横たわっている。
+</div>
+終わらぬ夢がお前たちの導き手ならば、越えてゆけ！己が信念の旗のもとに！
+</strong>
+<div class="form-group">
+  <div class="btn-b">
+    <%= link_to "Xで共有する", "https://twitter.com/share?url=#{request.url}&text=#{URI.encode_www_form_component("終わらぬ夢がお前たちの導き手ならば、越えてゆけ！己が信念の旗のもとに！")}&hashtags=#{URI.encode_www_form_component("ミニアプリ,トミメイセイ")}", target: '_blank' %>
+  </div>
+
+  <div class="btn">
+  <%= link_to "イントロダクションへ戻る", introduction_path %>
+  </div>

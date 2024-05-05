@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :require_login, only: %i[introduction random_result]
+  skip_before_action :require_login, only: %i[introduction random_result result1 result2 result3]
 
   def introduction; end
 
@@ -8,5 +8,10 @@ class PagesController < ApplicationController
   def random_result
     @randam_roger = RandamRoger.order('RANDOM()').first
   end
-
+  
+  def result1; end
+  
+  def result2; end
+  
+  def result3; end 
 end

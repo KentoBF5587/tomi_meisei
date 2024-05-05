@@ -1,0 +1,20 @@
+<% content_for(:title, 'ロジャーの言葉1') %>
+<h2>結果</h2>
+
+<strong>
+<div class="form-group">
+富、名声、力、この世の全てを手に入れた男、”海賊王”ゴールド・ロジャー。彼の死に際に放った一言は人々を海へ駆り立てた。
+</div>
+<div class="form-group">
+「俺の財宝か？欲しけりゃくれてやる、探せ！この世の全てをそこに置いてきた」。
+</div>
+男たちはグランドラインを目指し、夢を追い続ける。世はまさに、大海賊時代！
+</strong>
+<div class="form-group">
+  <div class="btn-b">
+    <%= link_to "Xで共有する", "https://twitter.com/share?url=#{request.url}&text=#{URI.encode_www_form_component("「俺の財宝か？欲しけりゃくれてやる、探せ！この世の全てをそこに置いてきた」")}&hashtags=#{URI.encode_www_form_component("ミニアプリ,トミメイセイ")}", target: '_blank' %>
+  </div>
+
+  <div class="btn">
+  <%= link_to "イントロダクションへ戻る", introduction_path %>
+  </div>
