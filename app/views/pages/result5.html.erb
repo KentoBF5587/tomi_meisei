@@ -1,0 +1,22 @@
+<% content_for(:title, 'ガチャ結果5') %>
+<h2>結果(5/5)</h2>
+<div style="text-align: center;">
+<div class="form-group">
+<strong>
+初学者たちの背中を押すシルバーズ・レイリー
+</strong>
+</div>
+  <%= image_tag 'syugyou3_tatsujin.png' %>
+<div class="form-group">
+<strong>「頂点まで行って来い!!!」</strong>
+</div>
+
+</div>
+<div class="form-group">
+  <div class="btn-b">
+    <%= link_to "Xで共有する", "https://twitter.com/share?url=#{request.url}&text=#{URI.encode_www_form_component("初学者たちの背中を押すシルバーズ・レイリー「頂点まで行って来い!!!」")}&hashtags=#{URI.encode_www_form_component("ミニアプリweek,トミメイセイ")}", target: '_blank' %>
+  </div>
+
+  <div class="btn">
+  <%= link_to "タイトルへ", root_path %>
+  </div>

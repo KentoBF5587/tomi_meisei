@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get "result1", to: "pages#result1"
   get "result2", to: "pages#result2"
   get "result3", to: "pages#result3"
+  get "result4", to: "pages#result4"
+  get "result5", to: "pages#result5"
 
 
   get 'login', to: 'user_sessions#new'

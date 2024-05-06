@@ -1,0 +1,22 @@
+<% content_for(:title, 'ガチャ結果4') %>
+<h2>結果(4/5)</h2>
+<div style="text-align: center;">
+<div class="form-group">
+<strong>
+沼から抜けようとするウルージ
+</strong>
+</div>
+  <%= image_tag 'job_obousan_hair.png' %>
+<div class="form-group">
+<strong>「ずいぶんやられたが…さて本当に…希望はあるのかどうか…ボチボチ反撃してみよう…!!!」」</strong>
+</div>
+
+</div>
+<div class="form-group">
+  <div class="btn-b">
+    <%= link_to "Xで共有する", "https://twitter.com/share?url=#{request.url}&text=#{URI.encode_www_form_component("沼から抜けようとするウルージ「ずいぶんやられたが…さて本当に…希望はあるのかどうか…ボチボチ反撃してみよう…!!!」")}&hashtags=#{URI.encode_www_form_component("ミニアプリweek,トミメイセイ")}", target: '_blank' %>
+  </div>
+
+  <div class="btn">
+  <%= link_to "タイトルへ", root_path %>
+  </div>
