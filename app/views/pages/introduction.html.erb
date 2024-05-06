@@ -4,18 +4,28 @@
 <p>「富、名声、力……」から始まる某人気漫画のパロディミニアプリです。</p>
 
 
-<h2>どうやって遊ぶ？</h2>
+<h2>遊び方</h2>
+
+<div class="form-group">
+当アプリでは2つの遊び方が出来ます。
+</div>
+
+<h3>1. 某人気漫画キャラガチャ（アカウント不要） <font color="fa8072">NEW</font></h3>
 
 <div class-="form-group">
-下のリンクを押すと、”あの某人気漫画のプロローグ”が表示されます。全3種類。
+下のリンクを押すと、”あの漫画の名言”が表示されます。だがどこか様子がおかしい……？全5種類。
+</div>
+<div class="form-group">
+※キャラ崩壊注意
 </div>
 
 <div class="btn-b">
-  <%= link_to "プロローグ", random_result_path %>
+  <a href="#" id="button">ガチャを引く</a>
 </div>
 
-<h2>アカウントを作ってさらなる高みへ</h2>
-上記のように、このアプリはログインなしでも遊べますが、アカウントを作ると別モードでのプレイが可能に。
+<h3>2. 某人気漫画プロローグメーカー（アカウント必要）</h3>
+<p>アカウントを作る事で更なる高みへ。</p>
+
 <div class="form-group">
 <h3>”あのプロローグを作る事が出来る”</h3>
 あなたは”全世界を震撼させた”現場に立ち会うことになります。
@@ -30,15 +40,32 @@
 <div class="form-group">
 まずは書いてみてください。
 </div>
-<div class="btn">
-  <%= link_to "言葉を刻む（アカウント必要）", new_agitator_path %>
+
+<div class="form-group">
+  <div class="btn">
+    <%= link_to "言葉を刻む（アカウント必要）", new_agitator_path %>
+  </div>
 </div>
-<br />
-<div class="btn">
-<%= link_to "刻まれた言葉を見る", agitators_path %>
+
+<div class="form-group">
+  <div class="btn">
+    <%= link_to "刻まれた言葉を見る", agitators_path %>
+  </div>
 </div>
-<br />
+
 <div class="btn">
   <%= link_to "タイトルへ戻る", root_path %>
 </div>
 
+<script>
+document.getElementById("button").addEventListener('click', function() {
+    const subjectArray = [
+        'https://tomi-meisei.onrender.com/result1', 'https://tomi-meisei.onrender.com/result2', 'https://tomi-meisei.onrender.com/result3',
+        'https://tomi-meisei.onrender.com/result4', 'https://tomi-meisei.onrender.com/result5'
+    ];
+
+    const subject = subjectArray[Math.floor(Math.random() * subjectArray.length)];
+
+    window.location.href = subject;
+});
+</script>

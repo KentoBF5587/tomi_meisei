@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :require_login, only: %i[introduction random_result result1 result2 result3]
+  skip_before_action :require_login, only: %i[introduction random_result result1 result2 result3 result4 result5]
 
   def introduction; end
 
@@ -13,5 +13,9 @@ class PagesController < ApplicationController
   
   def result2; end
   
-  def result3; end 
+  def result3; end
+
+  def result4; end
+
+  def result5; end
 end

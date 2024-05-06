@@ -1,23 +1,23 @@
-<% content_for(:title, 'ロジャーの言葉3') %>
-<h2>結果(3/3)</h2>
-
+<% content_for(:title, 'ガチャ結果3') %>
+<h2>結果(3/5)</h2>
+<div style="text-align: center;">
+<div class="form-group">
 <strong>
-<div class="form-group">
-富、名声、タツタ、この世の全てを手に入れた男、”海賊王”ゴールド・ロジャー。彼の一言は食欲を掻き立てた。
-</div>
-<div class="form-group">
-「今年のタツタか？探せ！マクド◯ルドに置いてきた」
-</div>
-人々は夢を追い続ける。世はまさに、チキンタツタ時代！
+実装がうまくいかずも己を鼓舞するマルコ
 </strong>
+</div>
+  <%= image_tag 'youkai_suzaku.png' %>
+<div class="form-group">
+<strong>「いきなり”キング”はとれねェだろうよい」</strong>
+</div>
+
+</div>
 <div class="form-group">
   <div class="btn-b">
-    <%= link_to "Xで共有する", "https://twitter.com/share?url=#{request.url}&text=#{URI.encode_www_form_component("「今年のタツタか？探せ！マクド◯ルドに置いてきた」")}&hashtags=#{URI.encode_www_form_component("ミニアプリ,トミメイセイ")}", target: '_blank' %>
+    <%= link_to "Xで共有する", "https://twitter.com/share?url=#{request.url}&text=#{URI.encode_www_form_component("実装がうまくいかずも己を鼓舞するマルコ「いきなり”キング”はとれねェだろうよい」")}&hashtags=#{URI.encode_www_form_component("ミニアプリweek,トミメイセイ")}", target: '_blank' %>
   </div>
 
   <div class="btn">
-  <%= link_to "イントロダクションへ戻る", introduction_path %>
+  <%= link_to "タイトルへ", root_path %>
   </div>
-
-
 
